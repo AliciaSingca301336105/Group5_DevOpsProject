@@ -17,15 +17,15 @@ import com.example.enroll.repo.StudentRepository;
 @Service
 public class StudentService {
 
-    @Autowired
+	@Autowired
     private StudentRepository studentRepository;
     
     @Autowired
     private ProgramRepository programRepository;
     
     @Autowired
-    private EnrollmentRepository enrollmentRepository; // Add this line    
-	
+    private EnrollmentRepository enrollmentRepository; 
+    
     // New student registration
     public Student registerStudent(Student student) {
         return studentRepository.save(student);
@@ -64,5 +64,4 @@ public class StudentService {
     public Student updateStudent(Student student) {
         return studentRepository.save(student); 
     }
-    
 }
